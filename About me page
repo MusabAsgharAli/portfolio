@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom animation classes */
+        @keyframes slideInFromLeft {
+            from {
+                transform: translateX(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        .main{
+            border-radius: 23px;
+            align-items: center;
+            text-align: center;
+            background-color: #5abeb9;
+            color: #000000;
+           /* background-color: #08212a; */
+        }
+        body{
+          background: #093f4f;
+        }
+        .foot{
+            height: 5px;
+            color: #39fcff;
+            padding-bottom: 23px;
+            font-size: smaller;
+            background-color: #15602f;
+        }
+        .par{
+            color: #39fcff;
+        }
+    </style>
+</head>
+<body class=" text-gray-900">
+    <!-- Header -->
+    <header class="main   text-white p-6 shadow-lg">
+        <div class="container mx-auto">
+            <h1 class="text-4xl font-bold">About Me</h1>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="container mx-auto mt-10 flex flex-col items-center space-y-10">
+
+         <!-- Animated Image Section -->
+         <section id="image-section" class="relative overflow-hidden  p-8 rounded-lg shadow-lg">
+            <h2 class="text-3xl font-semibold mb-4 text-center">MUSAB ASGHAR</h2>
+            <div class="w-full h-auto overflow-hidden  ">
+                <img id="animated-image" class="w-full" src="musab.png" alt="Animated Image">
+            </div>
+        </section>
+    
+        <!-- About Me Section -->
+        <section id="about-section" class="bg-[#15602f]  text-[#39fcff] p-8 rounded-lg shadow-lg opacity-0 transform translate-y-10 transition duration-1000 ease-in-out">
+            <div class="par">
+            <h2 class="text-3xl font-semibold mb-4">Hello, I'm Musab ASGHAR</h2>
+            <p class="text-lg mb-4 ">I'm a Full Stack Web Develper </p>
+            <p class="text-lg mb-4">            
+                Hi there! I'm Musab Asghar, a driven web developer on an inventive and self-improvement adventure. Motivated by the abundance of internet information, I set off on this new journey with resolve. I used YouTube as my virtual classroom to refine my HTML, CSS, and JavaScript 
+                abilities and establish the groundwork for my future coding endeavors. I learned more about the complexities of front-end development with every tutorial, becoming an expert at creating aesthetically pleasing and responsive web interfaces.
+                However, my curiosity didn't end there. I explored Tailwind CSS because I was impressed by its effectiveness in styling web applications and its utility-first philosophy. I embraced Tailwind CSS's simplicity and easily incorporated it into my process, which improved my ability 
+                to produce slick, contemporary  designs. My goal in back-end development was to create dynamic and interactive web experiences, so I set out to master it. PHP turned into my go-to tool, enabling me to create functionality and deftly manage server-side logic. I became an expert PHP programmer after many hours of trial and error, turning static websites into dynamic platforms that drastically increase user engagement.
+                However, without a strong database to efficiently store and handle data, no online application is complete. This is where MySQL came into play, giving me the resources I needed to develop and improve the databases that power my online projects. I mastered using MySQL's capability, from creating elaborate schemas to running sophisticated queries.
+                Equipped with a broad range of abilities obtained from self-guided education and practical experience, I am prepared to take on any obstacle that may arise. I enjoy working in the fast-paced field of web development, whether it be creating responsive websites, adding cutting-edge features, or improving performance.
+                php my unwavering enthusiasm for learning and dedication to perfection propel me to continuously push the limits of what's feasible in the digital world. I work hard to improve user experience with every project I work on, using my skills to make slick, user-friendly interfaces that enthrall and motivate.
+                welcome change as a chance for personal development in a field that is continuously changing, and I actively research new technology and industry best practices to keep on top of the game. I am committed to remaining at the forefront of innovation, constantly looking for methods to hone my skill and provide outcomes that are unmatched, whether it is through the adoption of industry standards or the mastery of new frameworks.
+                But I'm also a team player, a problem-solver, and a creative thinker outside of the code. I work best in group settings where I can use my technical knowledge to make significant contributions to projects and work with like-minded people to realize ideas. I am an invaluable member of any team, contributing vitality, excitement, and a sharp eye for detail as well as a talent for coming up with tasteful answers to challenging issues.
+                I'm pleased to work as a web developer in this technologically advanced world, influencing the digital environment one line of code at a time. I am motivated by a sense of purpose for any project I embark on because I am aware of the potential for my work to have a significant influence on other people's lives.
+                Therefore, there's no need to go any farther if you're looking for a web developer who is passionate about producing excellent outcomes and proficient in the newest technology.
+                I'm Musab Asghar, and I'm prepared to make your dream come true.
+                I appreciate your thinking of me for your upcoming project. Together, let's create something incredible!
+            </p>
+        </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="foot p-6 mt-10">
+        <div class="container mx-auto text-center">
+            <p class="text-1xl">&copy; 2024 Musab Asghar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Animations -->
+    <script>
+        // Function to add animation classes to elements after DOM content loads
+        document.addEventListener('DOMContentLoaded', () => {
+            const aboutSection = document.getElementById('about-section');
+            const imageSection = document.getElementById('image-section');
+            const animatedImage = document.getElementById('animated-image');
+
+            setTimeout(() => {
+                aboutSection.classList.add('opacity-100', 'translate-y-0');
+                imageSection.classList.add('opacity-100');
+                animatedImage.classList.add('animate-fade-in', 'animate-slide-in-from-left');
+            }, 500);
+        });
+    </script>
+</body>
+</html>
